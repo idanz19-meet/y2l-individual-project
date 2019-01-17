@@ -1,0 +1,60 @@
+h1 {
+	color:red;
+}
+
+@keyframes bounce {
+	0% {
+		transform: scale(0.1);
+		opacity: 0;
+	}
+	60% {
+		transform: scale(1.2);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.button {
+  font: bold 14px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+#anim {
+	animation: bounce 1s;
+	animation-iteration-count: 1;
+}
+
+.orange {
+	color:brown;
+}
+
+#police {
+	color:blue;
+}
+
+body {
+	background-color:white;
+	text-align:center;
+}
+
+.fb-color{
+    background-color: #3b539b
+}
+
+.text-logo{
+    font-size: 20px;
+    color: white;
+}
+
+.header_img{
+    width: 33%
+}
