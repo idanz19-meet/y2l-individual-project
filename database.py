@@ -15,3 +15,11 @@ def signup_now(name,password,email):
         email=email)
     session.add(new_user)
     session.commit()
+
+def send_message(from_who,to_whom,message):
+	new_message = New_message(
+		from_who=from_who,
+		to_whom=to_whom,
+		message=message)
+	session.add(new_message)
+	session.commit()

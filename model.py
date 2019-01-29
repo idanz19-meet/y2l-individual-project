@@ -12,3 +12,10 @@ class User(Base):
     name = Column(String)
     password = Column(String)
     email = Column(String)    
+
+class New_message(Base):
+	__tablename__ = "messages_table"
+	id = Column(Integer, primary_key=True)
+	from_who = Column(String)
+	to_whom = Column(String)
+	message = Column(String)
