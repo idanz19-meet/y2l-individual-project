@@ -16,6 +16,6 @@ class User(Base):
 class New_message(Base):
 	__tablename__ = "messages_table"
 	id = Column(Integer, primary_key=True)
-	from_who = Column(String)
-	to_whom = Column(String)
+	sender = Column(String)
+	receiver = Column(String)
 	message = Column(String)

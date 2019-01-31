@@ -12,19 +12,15 @@
       <li><a href="{{url_for('messaging')}}">Send</a></li>
       <li><a href="{{url_for('messages')}}">Messages</a></li>
     </ul>
-  	<h1> Sign Up </h1>
-  	<p id="police"> Enter your name password and email! </p>
-      <form action="/thanks" method='POST'>
-        <input type="text" name="user_name" placeholder="name">
-        <br>
-        <input type="password" name="user_password" placeholder="password">
-        <br>
-        <input type="text" name="user_email" placeholder="email">
-        <br><br>
-        <input type="submit" value="Sign Up!">
-      </form> 
-    <br>
+  	<h1> Here are your messages! </h1>
 
+  	<p id="police"> Aren't friends the best? </p>
+    <br>
+    {% for i in user_table%}
+    <p> {{i.name}} </p>
+    <br>
+    {% endfor%}
+    <a href="{{url_for('home_page')}}" class="button"> Go Home </a>
 
   </body>
 </html>

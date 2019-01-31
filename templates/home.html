@@ -6,26 +6,20 @@
     <title> title </title>
   </head>
   <body>
+    <ul>
+      <li><a class="active" href="{{url_for('thanks')}}">Home</a></li>
+      <li><a href="{{url_for('sign_up')}}">Sign Up</a></li>
+      <li><a href="{{url_for('messaging')}}">Send</a></li>
+      <li><a href="{{url_for('messages')}}">Messages</a></li>
+    </ul>
+    <div>
 
-  	<header>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-  		  <h1> UNDER CONSTRUCTION </h1>
-  	</header>
+  	 <h1> Home </h1>
 
-<!--   	<p id="police"> Your home is where your heart is </p>
-    <br>
-    <a href="http://127.0.0.1:5000/sign_up" class="button"> Sign up! </a> -->
+  	 <p id="police"> Your home is where your heart is </p>
+     <br>
+     <a href="{{url_for('sign_up')}}" class="button"> Sign up! </a>
+    </div>
 
   </body>
 </html>

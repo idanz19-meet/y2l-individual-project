@@ -10,9 +10,20 @@ def home_page():
 def sign_up():
 	return render_template("sign_up.html")
 
-@app.route('/messaging')
+@app.route('/messages')
+def messages():
+	return render_template("messages.html")
+
+@app.route('/messaging', methods =['GET', 'POST'])
 def messaging():
-	return render_template("message.html")
+	if request.method == "GET" :
+	    return render_template("message.html")
+	else:
+		sender = "John_123"
+		receiver = request.form['receiver_name']
+		message = request.form['user_message']
+		send_message(sender,receiver,message)
+		return render_template("message.html")
 
 @app.route('/thanks', methods = ['GET', 'POST'])
 def thanks():

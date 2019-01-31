@@ -16,10 +16,10 @@ def signup_now(name,password,email):
     session.add(new_user)
     session.commit()
 
-def send_message(from_who,to_whom,message):
+def send_message(sender,receiver,message):
 	new_message = New_message(
-		from_who=from_who,
-		to_whom=to_whom,
+		sender=sender,
+		receiver=receiver,
 		message=message)
 	session.add(new_message)
 	session.commit()
