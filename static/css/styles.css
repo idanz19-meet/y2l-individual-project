@@ -105,6 +105,10 @@ input[type=submit]:hover {
 	font-family: Verdana, Helvetica, serif;
 }
 
+h3 {
+	color: #3c7c16;
+}
+
 body {
 	background-color:white;
 	text-align:center;

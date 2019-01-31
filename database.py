@@ -23,3 +23,7 @@ def send_message(sender,receiver,message):
 		message=message)
 	session.add(new_message)
 	session.commit()
+
+
+def get_messages_by_id(id):
+	session.query(New_message).all()

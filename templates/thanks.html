@@ -6,9 +6,14 @@
     <title> title </title>
   </head>
   <body>
-  	<header>
-  		  <h1> Thanks for signing up! </h1>
-  	</header>
+    <ul>
+      <li><a class="active" href="{{url_for('thanks')}}">Home</a></li>
+      <li><a href="{{url_for('sign_up')}}">Sign Up</a></li>
+      <li><a href="{{url_for('messaging')}}">Send</a></li>
+      <li><a href="{{url_for('messages')}}">Messages</a></li>
+      <li><a href="{{url_for('wordbook')}}">Wordbook</a></li>
+    </ul>
+  	<h1> Thanks for signing up! </h1>
 
   	<p id="police"> We hope you'll have a plesent stay! </p>
     <br>

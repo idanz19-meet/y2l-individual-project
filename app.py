@@ -10,8 +10,17 @@ def home_page():
 def sign_up():
 	return render_template("sign_up.html")
 
+@app.route('/log_in')
+def log_in():
+	return render_template("log_in.html")
+
+@app.route('/wordbook')
+def wordbook():
+	return render_template("wordbook.html")
+
 @app.route('/messages')
 def messages():
+	messages = get_messages_by_id(1)
 	return render_template("messages.html")
 
 @app.route('/messaging', methods =['GET', 'POST'])
@@ -35,7 +44,8 @@ def thanks():
 		user_email = request.form['user_email']
 
 		check_user = session.query(User).filter_by(email=user_email).first()
-		if check_user:
+		check_email = session.query(User).filter_by(name=user_name).first()
+		if check_user or check_email:
 			return render_template("sorry.html")
 		else:
 			signup_now(user_name, user_password, user_email)
